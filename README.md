@@ -44,8 +44,8 @@ The model follows a shared-core MTL design:
 
 ## 📊 Datasets Used
 
-| Task         | Dataset | Link |
-|--------------|---------|------|
+| Task         | Dataset | 
+|--------------|---------|
 | Emotion      | [Emotions Dataset (Kaggle)](https://www.kaggle.com/datasets/nelgiriyewithana/emotions) |
 | Violence     | [Gender-based Violence Tweet Classification](https://www.kaggle.com/datasets/gauravduttakiit/gender-based-violence-tweet-classification?select=Train.csv) |
 | Hate Speech  | [Hate Speech and Offensive Language Dataset](https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset) |
