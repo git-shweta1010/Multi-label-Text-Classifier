@@ -1,35 +1,25 @@
-# Multi-label Text Classifier (Emotion, Violence, Hate Speech)
+## Multi-Task NLP model using LSTM
+Multi-task learning (MTL) is a machine learning approach where a model is trained simultaneously on multiple related tasks!
+Libraries used:
 
-This project is a multi-task text classification tool that identifies the **major category** (Emotion, Violence, or Hate Speech) and predicts a **sub-label** specific to that category using deep learning.
+Pandas, Numpy, Scikit-learn, nltk, tensorflow, seaborn, matplotlib
+Following is the architecture of the project:
 
-## 🚀 Features
+Architecture
+Datasets:
 
-- Classifies user input into:
-  - **Emotion**: sadness, joy, love, anger, fear, surprise
-  - **Violence**: sexual, physical, emotional, harmful traditional practices, economic
-  - **Hate Speech**: offensive speech, hate speech, or neither
-- Interactive text input using `ipywidgets`
-- Built using a multi-branch deep learning model (Keras/TensorFlow)
-- Preprocessing with stopword removal and tokenization
+(i) Emotion Data: https://www.kaggle.com/datasets/nelgiriyewithana/emotions
+(ii) Violence Data: https://www.kaggle.com/datasets/gauravduttakiit/gender-based-violence-tweet-classification?select=Train.csv
+(iii) Hate Speech Data: https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset
 
-## 🧠 Model Architecture
+Compontents:
 
-The project uses a shared input pipeline with three output heads corresponding to the emotion, violence, and hate detection tasks. Each branch outputs a softmax probability distribution, from which the most confident prediction is selected.
+(i) Individual Inputs:
 
-## 🛠️ Tech Stack
+Multi-Task model accepts input for each task individually.
+(ii) Individual Outputs:
 
-- Python 3.x
-- Jupyter Notebook
-- TensorFlow / Keras
-- NumPy
-- ipywidgets
-- NLTK / custom preprocessing
+Multi-Task model generates output for each task individually
+(iii) Shared Core Layers:
 
-## 💡 How It Works
-
-1. User inputs text via a widget interface
-2. Text is cleaned, tokenized, and padded
-3. Model predicts all three label sets simultaneously
-4. The model outputs the most confident **major label**, and the corresponding **sub-label** is displayed
-
-
+Multi-Task models functionality is that a sinlge model can do multiple related tasks. To exhibit this functionality the core layers of the model like (Embedding, LSTM, pooling, dropout etc) are shared among all the tasks and are not seperately available for them
