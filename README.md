@@ -11,7 +11,6 @@ This project implements a **Multi-Task Learning (MTL)** approach using LSTM to s
 - `Scikit-learn` – evaluation and preprocessing
 - `NLTK` – text cleaning and stopword removal
 - `TensorFlow / Keras` – model building
-- `Seaborn`, `Matplotlib` – data visualization
 
 ## 🧱 Model Architecture
 
